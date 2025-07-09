@@ -1,0 +1,54 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    padding: 10px 30px;
+}
+span{
+    font-size: 30px;
+}
+.navbtn{
+    border: none;
+    font-size: 16px;
+    background-color: white;
+}
+.searchbtn{
+    background-color: #79A3D5;
+    border-radius: 25px;
+    font-size: 18px;
+    padding: 5px 10px;
+    
+}
+input{
+    padding: 10px 40px;
+    width: 300px;
+    margin: 0px 20px;
+    border-radius: 25px;
+
+}
+.navRoute{
+    display:flex;
+    gap: 20px;
+}
+
+.homeBanner{
+    border: 1px solid black;
+    min-height: 400px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 5px 5px 30px -9px #2a3037 inset;
+}
+.appointment_booking{
+    font-size: 40px;
+}
+.bannerbtn{
+    font-size: 16px;
+    padding: 10px 30px;
+    background-color: #79A3D5;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 5px 5px 3px 3px#2a3037 ;
+}
