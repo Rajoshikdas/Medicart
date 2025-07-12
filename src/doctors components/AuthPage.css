@@ -1,0 +1,75 @@
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #fdfdfd;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.05);
+  width: 90%;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.auth-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  font-size: 1rem;
+}
+
+.auth-form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #79a3d5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.auth-form button:hover {
+  background-color: #5b87b0;
+}
+
+.auth-toggle {
+  color: #007bff;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+
+.auth-message {
+  color: green;
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* ✅ Responsive tweaks for small screens */
+@media screen and (max-width: 480px) {
+  .auth-container {
+    padding: 15px;
+    margin: 20px auto;
+  }
+
+  .auth-form input,
+  .auth-form button {
+    font-size: 0.95rem;
+    padding: 8px;
+  }
+
+  .auth-message {
+    font-size: 0.9rem;
+  }
+
+  .auth-toggle {
+    font-size: 0.9rem;
+  }
+}
