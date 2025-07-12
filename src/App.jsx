@@ -1,4 +1,4 @@
-import Home from './home_componets/home'
+import Home from './home_componets/Home'
 import './App.css'
 // import AuthPage from './doctors components/AuthPage'
 
