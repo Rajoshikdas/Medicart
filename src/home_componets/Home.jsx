@@ -1,31 +1,43 @@
-import React from 'react'
-import './home.css'
+import React, { useState } from 'react';
+import './home.css';
+import Shop from './shop';
+
 const Home = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <>
-    <div className='nav'>
+      <div className='nav'>
         <span>Medikart</span>
-        <div>
-            <input type="text" placeholder='Search' />
-            <button className='navbtn searchbtn'>Search</button>
+
+        {/* Hamburger Icon */}
+        <div className='hamburger' onClick={() => setMenuOpen(!menuOpen)}>
+          ☰
         </div>
-        <div className='navRoute'>
-            <button className='navbtn'>Home</button>
-            <button className='navbtn'>Appoinments</button>
-            <button className='navbtn'>Dashboard</button>
+
+        {/* Navigation Routes */}
+        <div className={`navRoute ${menuOpen ? 'open' : ''}`}>
+          <button className='navbtn'>Home</button>
+          <button className='navbtn'>Appointments</button>
+          <button className='navbtn'>Dashboard</button>
+          <button className='navbtn logout-design'>Logout</button>
         </div>
-    </div>
-    <div className='homeBanner'>
+      </div>
+
+      <div className='homeBanner'>
         <div className="appointment_booking">
-            <div>Book an appoinment with our doctors.</div>
-            <button className='bannerbtn'>Book</button>
+          <div>Book an appointment</div>
+          <div>with our doctors.</div>
+          <button className='bannerbtn'>Book</button>
         </div>
         <div className="home-f">
-            <img src="" alt="" />
+          <img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png" alt="bannerimg" />
         </div>
-    </div>
-    </>
-  )
-}
+      </div>
 
-export default Home
+      <Shop />
+    </>
+  );
+};
+
+export default Home;
