@@ -1,14 +1,14 @@
-import React from 'react'
 import { useState } from 'react';
-import './home.css'
+import { Link } from 'react-router-dom';
+import './home.css';
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dashboardOpen, setDashboardOpen] = useState(false); // for dropdown
 
-    const [menuOpen, setMenuOpen] = useState(false);
-    
   return (
     <>
-              <div className='nav'>
+      <div className='nav'>
         <span>Medikart</span>
 
         {/* Hamburger Icon */}
@@ -18,14 +18,32 @@ const Nav = () => {
 
         {/* Navigation Routes */}
         <div className={`navRoute ${menuOpen ? 'open' : ''}`}>
-          <button className='navbtn'>Home</button>
-          <button className='navbtn'>Appointments</button>
-          <button className='navbtn'>Dashboard</button>
+          <button className='navbtn'><Link to='/' >Home</Link></button>
+          <button className='navbtn'><Link to='home/cart'>Cart</Link></button>
+          <button className='navbtn'><Link to='home/appoinment'>Appointments</Link></button>
+
+          {/* Dashboard Dropdown */}
+          <div className="dashboard-dropdown">
+            <button
+              className='navbtn'
+              onClick={() => setDashboardOpen(!dashboardOpen)}
+            >
+              Dashboard ▾
+            </button>
+            {dashboardOpen && (
+              <div className="dropdown-options">
+                <button className="dropdown-item"><Link to='/DoctorPannel'>Doctor's Dashbord</Link></button>
+                <button className="dropdown-item">Admin</button>
+                <button className="dropdown-item">Patient</button>
+              </div>
+            )}
+          </div>
+
           <button className='navbtn logout-design'>Logout</button>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;

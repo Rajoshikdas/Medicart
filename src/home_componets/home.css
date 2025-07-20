@@ -17,7 +17,10 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: sticky;
+    top: 0px;
     padding: 10px 20px;
+    
 }
 
 span {
@@ -38,6 +41,10 @@ span {
     background-color: white;
     padding: 5px 10px;
     cursor: pointer;
+    background: none;
+}
+Link{
+    text-decoration: none;
 }
 
 .logout-design {
@@ -45,6 +52,29 @@ span {
     border-radius: 25px;
     height: 40px;
     width: 80px;
+}
+.dashboard-dropdown {
+  position: relative;
+}
+.dropdown-options {
+  position: absolute;
+  background-color: white;
+  color: black;
+  top: 100%;
+  left: 0;
+  min-width: 150px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  z-index: 999;
+}
+.dropdown-item {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* Home Banner */
@@ -59,6 +89,24 @@ span {
     align-items: center;
     box-shadow: 5px 5px 30px -9px #87b4e7 inset;
 }
+.Droplist {
+  border: 1px solid black;
+  padding: 10px;
+  width: 10px;
+  margin-left: 83%;
+  display: flex;
+  flex-direction: column; /* stack buttons vertically */
+  align-items: center;    /* center buttons horizontally */
+}
+
+.btnDrop {
+  margin: 5px 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+
 
 .appointment_booking {
     font-size: 2rem;
