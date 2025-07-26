@@ -18,9 +18,9 @@ const Nav = () => {
 
         {/* Navigation Routes */}
         <div className={`navRoute ${menuOpen ? 'open' : ''}`}>
-          <button className='navbtn'><Link to='/' >Home</Link></button>
+          <button className='navbtn'><Link to='/home' >Home</Link></button>
           <button className='navbtn'><Link to='home/cart'>Cart</Link></button>
-          <button className='navbtn'><Link to='home/appoinment'>Appointments</Link></button>
+          <button className='navbtn'><Link to='/appoinment'>Appointments</Link></button>
 
           {/* Dashboard Dropdown */}
           <div className="dashboard-dropdown">
@@ -32,14 +32,13 @@ const Nav = () => {
             </button>
             {dashboardOpen && (
               <div className="dropdown-options">
-                <button className="dropdown-item"><Link to='/DoctorPannel'>Doctor's Dashbord</Link></button>
-                <button className="dropdown-item">Admin</button>
-                <button className="dropdown-item">Patient</button>
+                <button className="dropdown-item"><Link to='/Doctorsregistraion'>Doctor's Dashbord</Link></button>
+                <button className="dropdown-item"><Link to='/adminlogin'>Admin</Link></button>
               </div>
             )}
           </div>
 
-          <button className='navbtn logout-design'>Logout</button>
+          <button className='navbtn logout-design'><Link to='/login'>Logout</Link></button>
         </div>
       </div>
     </>

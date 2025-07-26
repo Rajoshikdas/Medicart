@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './DoctorDashboard.css';
+import Nav from '../home_componets/Nav';
 
 const DoctorDashboard = () => {
   const [appointments, setAppointments] = useState([
@@ -26,6 +27,8 @@ const DoctorDashboard = () => {
 
 
   return (
+    <>
+    <Nav></Nav>
     <div className="doctor-container">
       <h2>Welcome, Doctor</h2>
 
@@ -56,6 +59,7 @@ const DoctorDashboard = () => {
         ))}
       </div>
     </div>
+    </>
   );
 };
 
